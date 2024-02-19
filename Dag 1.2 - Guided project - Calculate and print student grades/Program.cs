@@ -30,3 +30,4 @@ Console.WriteLine("Sophia\t\t" + (sophia1 + sophia2 + sophia3 + sophia4 + sophia
 Console.WriteLine("Nicolas\t\t" + (nicolas1 + nicolas2 + nicolas3 + nicolas4 + nicolas5) / (decimal)currentAssignments + "\tB");
 Console.WriteLine("Zahirah\t\t" + (zahirah1 + zahirah2 + zahirah3 + zahirah4 + zahirah5) / (decimal)currentAssignments + "\tB");
 Console.WriteLine("Jeong\t\t" + (jeong1 + jeong2 + jeong3 + jeong4 + jeong5) / (decimal)currentAssignments + "\tA");
+
