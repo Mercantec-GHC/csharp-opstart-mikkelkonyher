@@ -285,10 +285,10 @@ using System.Numerics;
 ////    }
 ////}
 
-////foreach (var name in names)
-////{
-////    Console.WriteLine(name);
-////}
+//foreach (var name in names)
+//{
+//    Console.WriteLine(name);
+//}
 
 
 
@@ -296,20 +296,138 @@ using System.Numerics;
 ////Exercise - Complete a challenge activity using for and if statements
 
 
-for (int i = 1; i <= 100; i++)
-{
-    Console.WriteLine(i);
+//for (int i = 1; i <= 100; i++)
+//{
+//    Console.WriteLine(i);
 
-    if (i % 3 == 0)
-    {
-        Console.WriteLine(i + " fizz");
-    }
-    if (i % 5 == 0)
-    {
-        Console.WriteLine(i + "Buzz");
-    }
-    if (i % 3 == 0 && i % 5 == 0)
-    {
-        Console.WriteLine(i + "Fizzbuzz");
-    }
+//    if (i % 3 == 0)
+//    {
+//        Console.WriteLine(i + " fizz");
+//    }
+//    if (i % 5 == 0)
+//    {
+//        Console.WriteLine(i + "Buzz");
+//    }
+//    if (i % 3 == 0 && i % 5 == 0)
+//    {
+//        Console.WriteLine(i + "Fizzbuzz");
+//    }
+//}
+
+
+
+
+// Exercise - Create do and while iteration loops
+
+//Random random = new Random();
+//int current = random.Next(1, 11);
+
+//do
+//{
+//    current = random.Next(1, 11);
+
+//    if (current >= 8) continue;
+
+//    Console.WriteLine(current);
+//} while (current != 7);
+
+/*
+while (current >= 3)
+{
+    Console.WriteLine(current);
+    current = random.Next(1, 11);
 }
+Console.WriteLine($"Last number: {current}");
+*/
+
+//Random dice = new Random();
+//int hero = 10;
+//int monster = 10;
+
+//do
+//{
+//    int roll = dice.Next(1,11);
+//    monster -= roll;
+//    Console.WriteLine($"monster was hit and lost {roll} health and has now {monster} health.");
+
+//    if (monster < 0 ) 
+//        continue;
+//    roll = dice.Next(1,11);
+//    hero -= roll;
+//    Console.WriteLine($"Hero was hit and lost {roll} health and has now {hero} health");
+
+
+//} while (hero > 0 && monster > 0);
+
+//Console.WriteLine(hero > monster ? "Hero wins" : "monster win");
+
+
+
+// Code project 1 - write code that validates integer input
+
+string readResult;
+int numericValue = 0;
+bool validNumber;
+
+do
+{
+    Console.Write("Enter a number: ");
+    readResult = Console.ReadLine();
+
+    validNumber = int.TryParse(readResult, out numericValue);
+
+    if (!validNumber)
+    {
+        Console.WriteLine("Invalid input. Please enter a valid number.");
+    }
+    else if (numericValue < 5 || numericValue > 10)
+    {
+        Console.WriteLine("Please enter a value between 5 and 10.");
+        validNumber = false; // Set validNumber to false to continue the loop
+    }
+} while (!validNumber);
+
+Console.WriteLine($"You entered: {numericValue} that has been accepted");
+
+
+
+// Code project 2 - write code that validates string input
+
+// Prompt the user for one of three role names: Administrator, Manager, or User.
+Console.WriteLine("Please enter your role: Administrator, Manager, or User");
+
+// Declare variables for role validation
+string userInput;
+bool validRole = false;
+
+// Iteration block using a do-while loop
+do
+{
+    // Obtain input from the user
+    userInput = Console.ReadLine();
+
+    // Trim leading and trailing whitespace and convert to lowercase for case-insensitive comparison
+    userInput = userInput.Trim().ToLower();
+
+    // Check if the input matches one of the three role options
+    if (userInput == "administrator" || userInput == "manager" || userInput == "user")
+    {
+        // Set validRole to true to exit the loop
+        validRole = true;
+    }
+    else
+    {
+        // Prompt the user for a valid entry
+        Console.WriteLine("Please enter a valid role: Administrator, Manager, or User");
+    }
+} while (!validRole);
+
+// Inform the user that their input value has been accepted
+Console.WriteLine($"Your role '{userInput}' has been accepted.");
+
+
+//Code project 3 - Write code that processes the contents of a string array
+
+
+string[] myStrings = new string[2] { "I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices" };
+
