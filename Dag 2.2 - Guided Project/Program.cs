@@ -9,7 +9,7 @@ int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
 int[] beckyScores = new int[] { 92, 91, 90, 91, 92, 92, 92 };
 int[] chrisScores = new int[] { 84, 86, 88, 90, 92, 94, 96, 98 };
 int[] ericScores = new int[] { 80, 90, 100, 80, 90, 100, 80, 90 };
-int[] gregorScores = new int[] { 91, 91, 91, 91, 91, 91, 91 };
+int[] gregorScores = new int[] { 91, 91, 91, 91, 91, 91, 91};
 
 // Student names
 string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor" };
